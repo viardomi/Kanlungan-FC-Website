@@ -429,7 +429,7 @@ p { text-wrap: pretty; }
 
 /* Landing photo motion: a quiet parallax layer behind the academy briefing. */
 .hero__field { overflow: hidden; background: var(--ink); color: var(--paper); }
-.hero__field-photo { position: absolute; z-index: 0; inset: -9%; background: url('/kanlungan-action.gif') center / cover no-repeat; transform: translate3d(0, var(--hero-photo-shift, 0px), 0) scale(1.08); filter: saturate(.86) contrast(1.04); will-change: transform; }
+.hero__field-photo { position: absolute; z-index: 0; inset: -9%; background: url('../kanlungan-action.gif') center / cover no-repeat; transform: translate3d(0, var(--hero-photo-shift, 0px), 0) scale(1.08); filter: saturate(.86) contrast(1.04); will-change: transform; }
 .hero__field-photo::after { position: absolute; inset: 0; content: ''; background: linear-gradient(180deg, rgba(9,10,8,.32), rgba(9,10,8,.64)); }
 .hero__field > :not(.hero__field-photo) { position: relative; z-index: 1; }
 .hero__field-head { color: var(--paper); border-bottom-color: rgba(255,255,255,.28); }
@@ -439,7 +439,7 @@ p { text-wrap: pretty; }
 .hero__caption { color: rgba(251,250,246,.82); border-top-color: rgba(255,255,255,.28); }
 
 /* Crest watermark: a quiet identity layer behind the landing-page content. */
-.hero::before, .hero::after { position: fixed; z-index: 0; top: 50%; width: min(55vw, 760px); aspect-ratio: 904 / 804; content: ''; background: url('/KanlunganCrest.svg') center / contain no-repeat; opacity: .108; filter: grayscale(.78) contrast(1.12); pointer-events: none; transform: translateY(-50%); }
+.hero::before, .hero::after { position: fixed; z-index: 0; top: 50%; width: min(55vw, 760px); aspect-ratio: 904 / 804; content: ''; background: url('../KanlunganCrest.svg') center / contain no-repeat; opacity: .108; filter: grayscale(.78) contrast(1.12); pointer-events: none; transform: translateY(-50%); }
 .hero::before { left: -15%; }
 .hero::after { right: -15%; }
 .hero__inner, .hero__proof { z-index: 1; }

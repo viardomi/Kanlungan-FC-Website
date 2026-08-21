@@ -13,6 +13,7 @@ const navItems = [
 ];
 
 const teams = ['U7', 'U8', 'U9', 'U10', 'U11', 'U12', 'U13', 'U14', 'U15'];
+const ASSET_BASE = import.meta.env.BASE_URL;
 
 const achievements = [
   { year: '2024', title: 'CarCar Mayors Cup', detail: 'Kanlungan FC U7 Champions', mark: '01' },
@@ -27,12 +28,12 @@ const updates = [
 ];
 
 const mediaTiles = [
-  { label: 'Team day', type: 'PHOTO', note: 'Official Facebook photo', src: '/gallery/kanlungan-gallery-01.jpg', alt: 'Kanlungan FC youth team gathered on a football pitch', href: 'https://www.facebook.com/photo.php?fbid=1074091725575840&set=pb.100089250671484.-2207520000&type=3' },
-  { label: 'Tournament moments', type: 'PHOTO', note: 'Official Facebook photo', src: '/gallery/kanlungan-gallery-02.jpg', alt: 'Kanlungan FC youth players in blue kits at a football tournament', href: 'https://www.facebook.com/photo.php?fbid=1068187649499581&set=pb.100089250671484.-2207520000&type=3' },
-  { label: 'Festival day', type: 'PHOTO', note: 'Official Facebook photo', src: '/gallery/kanlungan-gallery-03.jpg', alt: 'Kanlungan FC youth players in front of a Sandugo Football Festival backdrop', href: 'https://www.facebook.com/photo.php?fbid=1063370506647962&set=pb.100089250671484.-2207520000&type=3' },
-  { label: 'Together on pitch', type: 'PHOTO', note: 'Official Facebook photo', src: '/gallery/kanlungan-gallery-04.jpg', alt: 'Kanlungan FC youth players gathered for a football festival photo', href: 'https://www.facebook.com/photo.php?fbid=1063370473314632&set=pb.100089250671484.-2207520000&type=3' },
-  { label: 'Matchday energy', type: 'PHOTO', note: 'Official Facebook photo', src: '/gallery/kanlungan-gallery-05.jpg', alt: 'Kanlungan FC youth players on a football pitch', href: 'https://www.facebook.com/photo.php?fbid=1043973671920979&set=pb.100089250671484.-2207520000&type=3' },
-  { label: 'The club together', type: 'PHOTO', note: 'Official Facebook photo', src: '/gallery/kanlungan-gallery-06.jpg', alt: 'Kanlungan FC football group photo in front of a tournament banner', href: 'https://www.facebook.com/photo.php?fbid=1038196055832074&set=pb.100089250671484.-2207520000&type=3' },
+  { label: 'Team day', type: 'PHOTO', note: 'Official Facebook photo', src: `${ASSET_BASE}gallery/kanlungan-gallery-01.jpg`, alt: 'Kanlungan FC youth team gathered on a football pitch', href: 'https://www.facebook.com/photo.php?fbid=1074091725575840&set=pb.100089250671484.-2207520000&type=3' },
+  { label: 'Tournament moments', type: 'PHOTO', note: 'Official Facebook photo', src: `${ASSET_BASE}gallery/kanlungan-gallery-02.jpg`, alt: 'Kanlungan FC youth players in blue kits at a football tournament', href: 'https://www.facebook.com/photo.php?fbid=1068187649499581&set=pb.100089250671484.-2207520000&type=3' },
+  { label: 'Festival day', type: 'PHOTO', note: 'Official Facebook photo', src: `${ASSET_BASE}gallery/kanlungan-gallery-03.jpg`, alt: 'Kanlungan FC youth players in front of a Sandugo Football Festival backdrop', href: 'https://www.facebook.com/photo.php?fbid=1063370506647962&set=pb.100089250671484.-2207520000&type=3' },
+  { label: 'Together on pitch', type: 'PHOTO', note: 'Official Facebook photo', src: `${ASSET_BASE}gallery/kanlungan-gallery-04.jpg`, alt: 'Kanlungan FC youth players gathered for a football festival photo', href: 'https://www.facebook.com/photo.php?fbid=1063370473314632&set=pb.100089250671484.-2207520000&type=3' },
+  { label: 'Matchday energy', type: 'PHOTO', note: 'Official Facebook photo', src: `${ASSET_BASE}gallery/kanlungan-gallery-05.jpg`, alt: 'Kanlungan FC youth players on a football pitch', href: 'https://www.facebook.com/photo.php?fbid=1043973671920979&set=pb.100089250671484.-2207520000&type=3' },
+  { label: 'The club together', type: 'PHOTO', note: 'Official Facebook photo', src: `${ASSET_BASE}gallery/kanlungan-gallery-06.jpg`, alt: 'Kanlungan FC football group photo in front of a tournament banner', href: 'https://www.facebook.com/photo.php?fbid=1038196055832074&set=pb.100089250671484.-2207520000&type=3' },
 ];
 
 function Icon({ name, size = 18 }) {
@@ -55,7 +56,7 @@ function Icon({ name, size = 18 }) {
 function ClubMark({ compact = false }) {
   return (
     <div className={`club-mark ${compact ? 'club-mark--compact' : ''}`}>
-      <img className="club-mark__image" src="/KanlunganCrest.svg" alt="Kanlungan Football Club crest" />
+      <img className="club-mark__image" src={`${ASSET_BASE}KanlunganCrest.svg`} alt="Kanlungan Football Club crest" />
     </div>
   );
 }
