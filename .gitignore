@@ -4,3 +4,35 @@ dist
 .codex/
 .grok/
 .impeccable/
+
+# Local environment and Worker secrets
+.env*
+!.env.example
+!.env.*.example
+.dev.vars
+.dev.vars.*
+.wrangler/
+
+# Private keys and keystores
+*.pem
+*.key
+*.p8
+*.p12
+*.pfx
+*.jks
+*.keystore
+
+# Terraform state
+terraform.tfstate*
+*.tfstate
+*.tfstate.*
+.terraform/
+.terraform.lock.hcl
+
+# Browser authentication state
+.auth/
+playwright/.auth/
+storageState*.json
+storage-state*.json
+*.storage-state.json
+auth-state*.json
